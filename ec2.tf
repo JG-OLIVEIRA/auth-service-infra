@@ -4,6 +4,7 @@ resource "aws_instance" "auth_service_server" {
   key_name               = var.key_name
   vpc_security_group_ids = [aws_security_group.auth_service_sg.id]
   iam_instance_profile   = var.iam_instance_profile
+  user_data = file("user_data.sh")
 
   tags = {
     Name        = "auth-service-server"
