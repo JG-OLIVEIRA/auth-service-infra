@@ -57,7 +57,7 @@ terraform apply
 - ✅ Tráfego de saída (egress) totalmente liberado
 - ✅ Estado remoto do Terraform no S3 (`terraform-state-jorgegdoliveira`)
 - ✅ Lock de estado (state lock) ativado no backend
-- ✅ CI/CD automatizado com GitHub Actions (Plan & Apply)
+- ✅ CI/CD automatizado com GitHub Actions (Plan & Apply OR Destroy)
 - ✅ Autenticação segura na AWS via OIDC (Role ARN)
 
 ---
