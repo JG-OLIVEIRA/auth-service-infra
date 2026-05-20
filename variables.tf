@@ -1,9 +1,3 @@
-variable "my_ip" {
-  description = "IP block allowed to SSH into the instance"
-  type        = string
-  sensitive   = true
-}
-
 variable "vpc_id" {
   description = "ID of the VPC"
   type        = string
@@ -20,4 +14,9 @@ variable "key_name" {
   description = "Name of the key pair"
   type        = string
   sensitive   = true
+}
+
+variable "aws_region" {
+  description = "AWS region"
+  type        = string
 }

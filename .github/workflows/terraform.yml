@@ -38,7 +38,7 @@ jobs:
     name: "Terraform"
     runs-on: ubuntu-latest
     env:
-      TF_VAR_my_ip: ${{ secrets.MY_IP }}
+      TF_VAR_aws_region: ${{ secrets.AWS_REGION }}
       TF_VAR_vpc_id: ${{ secrets.VPC_ID }}
       TF_VAR_iam_instance_profile: ${{ secrets.IAM_INSTANCE_PROFILE }}
       TF_VAR_key_name: ${{ secrets.KEY_NAME }}
@@ -50,7 +50,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v6.1.1
         with:
           role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
-          aws-region: us-east-1
+          aws-region: ${{ secrets.AWS_REGION }}
 
       - name: HashiCorp - Setup Terraform
         uses: hashicorp/setup-terraform@v4.0.1
